@@ -13,37 +13,79 @@
                 font-size: 35px;
                 background-color: khaki;
             }
+            h1:hover{
+                color: cornflowerblue;
+                font-size: 35px;
+                background-color: powderblue;
+            }
             input:focus{
                 font-weight: 700;
-                font-size: 35px;
+                font-size: 20px;
                 color: green;
             }
             li:nth-child(2n+1){
-                background-color: grey;
+                background-color: powderblue;
+            }
+            li:nth-child(2n){
+                background-color: lightgreen;
             }
             a:visited{
                 color: blue;
             }
+            a{
+                font-size: 20px;
+            }
+            h1::before{
+                content: "Hello ";
+            }
+            li:hover{
+                color: indianred;
+                font-size: 25px;
+                background-color: khaki;
+            } 
+            ul{
+                font-size: 20px;
+            }          
+            input{
+                background-color: moccasin;
+            } 
+            .special-effect::after{
+                content: " Bye";
+                font-size: 25px;
+                background-color: blueviolet;
+            }
+            body {
+                counter-reset: section;
+                }
+
+                p::before {
+                counter-increment: section;            
+                content: "0" counter(section) ": ";
+                }
+            p::after{
+                content: "❤️";
+            }
         </style>
     </head>
     <body>
-        <h1>Psedu Class</h1>
-        <h1>Normal Class</h1>
+        <h1>Pseudo Class</h1>
+        <h1 class="special-effect">Normal Class</h1>
         <h1 class="special-effect">Vodro Class</h1>
         <input name="email" type="text">
-        <br>
+        <br> <br>
         <input name="password" type="text">
-        <br>
+        <br><br>
         <a href="https://www.youtube.com">Youtube</a>
-        <a href="htttps://www.facebook.com0">Facebook</a>
-        <ul>
-            <li>Alia</li>
-            <li>Dalia</li>
-            <li>Malia</li>
-            <li>Salia</li>
-            <li>Palia</li>
-            <li>Kalia</li>
-            <li>Talia</li>
-        </ul>
+        <br><br>
+        <a href="htttps://www.facebook.com">Facebook</a>
+        
+            <p>Alia</p>
+            <p>Dalia</p>
+            <p>Malia</p>
+            <p>Salia</p>
+            <p>Palia</p>
+            <p>Kalia</p>
+            <p>Talia</p>
+        
     </body>
 </html>
