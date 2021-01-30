@@ -19,3 +19,10 @@ friendsAge.unshift(11);
 console.log(friendsAge);
 friendsAge.shift();
 console.log(friendsAge);
+
+
+///Slice
+var teaLine = ['Kalam', 'Salam', 'Balam', 'Zihad', 'Prapti', 'Habiba', 'Jannati'];
+var part = teaLine.slice(2,4);
+console.log(part);
+console.log(teaLine); 
