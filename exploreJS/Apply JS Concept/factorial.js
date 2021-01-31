@@ -1,3 +1,5 @@
+//// Iteretive functions
+
 ///// Using Function and For loop
 ///// Using Function and For loop
 function factorial(num){
@@ -24,4 +26,17 @@ function factorial2(num){
 }
 
 var factorial = factorial2(10);
+console.log(factorial);
+
+
+//// Recursive function
+function factorial3(num){
+    if(num == 0){
+        return 1;
+    }
+    else{
+        return num * factorial3(num-1);
+    }
+}
+var factorial = factorial3(10);
 console.log(factorial);
