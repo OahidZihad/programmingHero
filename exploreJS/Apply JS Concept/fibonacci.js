@@ -33,3 +33,21 @@ function fibonacci1(num){
 
 var result = fibonacci1(10);
 console.log(result);
+
+///// fibonacci series in a recursive way
+function fibonacci2(num){
+    if(num==0){
+        return [0];
+    }
+    else if(num==1){
+        return [0,1];
+    }
+    else{
+        var fibo = fibonacci2(num-1);
+        var nextElement = fibo[num-1]+fibo[num-2];
+        fibo.push(nextElement);
+        return fibo;
+    }
+}
+var result = fibonacci2(10);
+console.log(result);
