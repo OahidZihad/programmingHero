@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid red;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>     
+<body>
+    <main>
+        <section>
+            <h3 id="dom">Exploring DOM</h3>
+            <article id="first-article">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum est, facere beatae consequatur assumenda ea vel harum rerum repudiandae unde, dicta facilis consectetur mollitia deleniti natus quisquam fuga optio placeat.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Dolorem vitae, excepturi iure doloribus repellat, hic magnam, consequuntur culpa error sint beatae illum odio aliquam? Mollitia at, sint earum aperiam quis vel cum tempora quos nisi maxime modi quo!</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Ex, molestiae atque minima provident delectus rem quisquam aliquam quas corporis numquam. Corporis ullam fugit saepe at atque perferendis cumque, explicabo aperiam laboriosam commodi natus laborum doloribus nostrum, officia ipsa.</p>
+            </article>
+            <article class="special">
+                <ul id="gift-list">
+                    <li>new list - 1</li>
+                    <li>new list - 2</li>
+                    <li>new list - 3</li>
+                    <li>new list - 4</li>
+                    <li>new list - 5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        // document.body.style.backgroundColor = "tomato";
+        // var dom = document.getElementById('dom');
+        // dom.style.backgroundColor = 'yellow';
+        // dom.style.fontSize = '20px'
+        // dom.style.color = 'green'
+
+        // var authors = document.querySelectorAll('.special h3');
+        // for(var i=0; i<authors.length; i++){
+        //     var element = authors[i];
+        //     // console.log(element.innerHTML);
+        //     element.innerHTML = "Lekhok-"+(i+1);
+        //     element.style.backgroundColor = "lightblue";
+        //     element.style.margin = '10px';
+        // }
+
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This is added by JavaScript';
+        article.appendChild(newParagraph);
+
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement('li');
+        li.innerHTML = "new list - 6";
+        ul.appendChild(li);
+    </script>
+</body>
+</html>
