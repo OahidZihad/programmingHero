@@ -5,7 +5,16 @@ function addNumbers(num1, num2){
         const num = arguments[i];
         sum = sum + num;        
     }
-    return sum;
+    function logInfo(message){
+        console.log(message);
+    }
+    logInfo('good morning');
+
+    var double = sum*2;
+    return double;
+
+
+    // return sum;
 }
 
 var result = addNumbers(3, 7, 9, 5);
