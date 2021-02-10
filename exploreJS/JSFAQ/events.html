@@ -8,14 +8,36 @@
 </head>
 <body>
     <h1 onclick="alert('I love you')">Exploring Events</h1>
-    <button onmousemove="handleClick()">Click Me</button>
+    <button onmousemove="handleClick1()">Click Me</button>
+    <button id="second">click me-1</button>
+    <button id="third">click me-2</button>
+    <button id="fourth">click me-3</button>
     <script>
         function handleClick(){
             console.log('Someone Clicked me.');
         }
-        function handleClick(){
+        function handleClick1(){
             console.log('Someone is over me.');
         }
+        function handleClick2(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        function handleClick3(){
+            document.body.style.backgroundColor = 'tomato';
+        }
+        var secondButton = document.getElementById('second');
+        secondButton.onclick = function(){
+            console.log('Second person clicked');
+        }
+        var thirdButton = document.getElementById('third');
+        thirdButton.onclick = handleClick2;
+
+        var fourthButton = document.getElementById('fourth');
+        fourthButton.addEventListener('click', handleClick3);
+        secondButton.addEventListener('click', function(){
+            document.body.style.color = "blue";
+        })
+        
     </script>
 </body>
 </html>
