@@ -21,6 +21,7 @@
         document.getElementById('first')
         .addEventListener('click', function(event){
             console.log('First Item Clicked');
+            event.stopPropagation();/////////////porer event gula r kaj korbe na
         })
         document.getElementById('myList')
         .addEventListener('click', function(event){
