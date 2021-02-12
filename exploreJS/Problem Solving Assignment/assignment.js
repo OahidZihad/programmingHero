@@ -56,16 +56,15 @@ console.log(result);
 
 /// sob theke choto friend er name ber korte hobe... array theke.....
 function tinyFriends(names){
-    var min = names[""];
-    // minLength = min.length;
+    var min = names[0].length;
+    var small;
     for (var i=0; i<names.length; i++){
-        var char = names[i];
-        var charLength = char.length;
-        if(charLength < names.length + i){
-            min = charLength;
+        if(names[i].length < min){
+            min = names[i].length;
+            small = names[i];
         }
     }
-    return min;
+    return small;
 }
 var names = ["Zihadd", "Rifat", "Zishan", "Rohit", "Ayon", "Habu mia"];
 var result = tinyFriends(names);
