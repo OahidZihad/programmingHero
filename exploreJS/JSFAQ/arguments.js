@@ -19,3 +19,21 @@ function addNumbers(num1, num2){
 
 var result = addNumbers(3, 7, 9, 5);
 console.log(result);
+
+
+
+
+
+
+
+function getFullName(firstName, lastName){
+    console.log(arguments);
+    let fullName = '';
+    for (let i = 0; i < arguments.length; i++) {
+        const element = arguments[i];
+        fullName = fullName +' '+ element;
+    }
+    return fullName;
+}
+const name = getFullName("Hanif", "Zihad", "Prapti", "Habiba", "Poribohon");
+console.log(name);
